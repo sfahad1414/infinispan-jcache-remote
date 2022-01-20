@@ -16,6 +16,7 @@ dependencies {
     compileOnly group: 'org.infinispan.protostream', name: 'protostream-processor', version: '4.4.1.Final'
     annotationProcessor group: 'org.infinispan.protostream', name: 'protostream-processor', version: '4.4.1.Final'
     implementation group: 'javax.cache', name: 'cache-api', version: '1.1.1'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.13.1'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }

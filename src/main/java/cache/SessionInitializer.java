@@ -1,12 +1,11 @@
 package cache;
 
+import cache.adaptor.MapAdaptor;
 import org.infinispan.protostream.SerializationContextInitializer;
 import org.infinispan.protostream.annotations.AutoProtoSchemaBuilder;
-import org.infinispan.protostream.types.java.CommonContainerTypes;
-import org.infinispan.protostream.types.java.CommonTypes;
 
 @AutoProtoSchemaBuilder(
-        includeClasses = { User.class },
+        includeClasses = { User.class, MapAdaptor.class},
         schemaFileName = "library.proto",
         schemaFilePath = "proto/")
 public interface SessionInitializer extends SerializationContextInitializer {

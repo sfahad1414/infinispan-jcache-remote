@@ -11,6 +11,7 @@ import javax.cache.Cache;
 import javax.cache.CacheManager;
 import javax.cache.Caching;
 import java.net.URISyntaxException;
+import java.util.HashMap;
 
 public class main
 {
@@ -21,6 +22,12 @@ public class main
         User user = cache.get("test");
         System.out.println(user.getType());
         System.out.println(user.getName());
+        Cache<String, HashMap<String, Object>> cache1 = cacheManager.getCache("map_cache");
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("Test", "Data");
+        cache1.put("test1", map);
+        HashMap<String, Object> data = cache1.get("test1");
+        System.out.println(data.get("Test"));
         /*org.infinispan.client.hotrod.configuration.ConfigurationBuilder cb
                 = new org.infinispan.client.hotrod.configuration.ConfigurationBuilder();
         cb.marshaller(new org.infinispan.commons.marshall.ProtoStreamMarshaller())
