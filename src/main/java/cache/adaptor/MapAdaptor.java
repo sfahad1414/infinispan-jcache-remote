@@ -16,7 +16,8 @@ public class MapAdaptor
 
     @ProtoFactory
     HashMap<?, ?> create(String map) throws JsonProcessingException {
-        return objectMapper.readValue(map, new TypeReference<HashMap<?, ?>>() {});
+        return objectMapper.readValue(map, new TypeReference<>() {
+        });
     }
 
     @ProtoField(1)
