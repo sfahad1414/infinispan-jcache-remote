@@ -12,8 +12,8 @@ public class MapAdaptor
 {
     @ProtoFactory
     HashMap<?, ?> create(byte[] map) throws IOException {
-        ByteArrayInputStream bis = null;
-        ObjectInputStream ois = null;
+        ByteArrayInputStream bis;
+        ObjectInputStream ois;
         try {
             bis = new ByteArrayInputStream(map);
             ois = new ObjectInputStream(bis);

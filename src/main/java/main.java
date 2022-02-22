@@ -1,11 +1,4 @@
-import cache.SessionInitializerImpl;
 import cache.User;
-import org.infinispan.client.hotrod.RemoteCache;
-import org.infinispan.client.hotrod.RemoteCacheManager;
-import org.infinispan.commons.marshall.ProtoStreamMarshaller;
-import org.infinispan.client.hotrod.configuration.ConfigurationBuilder;
-import org.infinispan.jboss.marshalling.commons.GenericJBossMarshaller;
-import org.infinispan.jcache.remote.JCacheManager;
 
 import javax.cache.Cache;
 import javax.cache.CacheManager;
